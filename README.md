@@ -1,203 +1,53 @@
-# 🍰 Jujuba Doces
+# 🍰 Jujuba Doces - Catálogo e Orçamento Mobile
 
-Sistema de catálogo e orçamento online para a **Jujuba Doces**.
+Site mobile first para cardápio, montagem de orçamento e agendamento de entrega/retirada.
 
-Desenvolvido para facilitar a consulta de produtos, montagem de orçamentos e, futuramente, permitir o cadastro de clientes e gerenciamento de pedidos.
+## Funcionalidades
 
----
+- Catálogo de produtos via `produtos.csv`
+- Busca por produto
+- Filtro por categoria
+- Carrinho de orçamento
+- Cadastro básico do cliente
+- Calendário para data da festa
+- Calendário e horário para entrega ou retirada
+- Envio do orçamento pelo WhatsApp
+- Publicação gratuita via GitHub Pages
 
-## 📱 Funcionalidades
+## Arquivos
 
-- ✅ Catálogo de produtos
-- ✅ Interface responsiva (Smartphone, Tablet e Desktop)
-- ✅ Busca por produto
-- ✅ Filtro por categoria
-- ✅ Carrinho de orçamento
-- ✅ Cálculo automático dos valores
-- ✅ Envio do orçamento pelo WhatsApp
-- ✅ Leitura dos produtos através de arquivo CSV
-
----
-
-## 🚀 Próximas funcionalidades
-
-- Cadastro de clientes
-
-- Login administrativo
-
-- Cadastro de produtos
-
-- Upload de fotos
-
-- Agenda de encomendas
-
-- Geração de PDF
-
-- Integração com PIX
-
-- Integração Mercado Pago
-
-- Dashboard financeiro
-
-- Controle de produção
-
----
-
-## 📂 Estrutura do projeto
-
-```
-jujuba-doces/
-
-│
-├── index.html
-├── produtos.csv
-├── README.md
-│
-├── css/
-│     └── style.css
-│
-├── js/
-│     └── app.js
-│
-├── img/
-│     ├── logo.png
-│     └── produtos/
-│
-└── assets/
+```txt
+index.html
+produtos.csv
+README.md
 ```
 
----
+## Como alterar preços
 
-## 📋 Estrutura do CSV
+Edite o arquivo `produtos.csv`.
 
-```
+Campos principais:
+
+```csv
 id,categoria,produto,preco,unidade,quantidade_minima,descricao,imagem,ativo
 ```
 
-Exemplo:
+Use `ativo` como `1` para mostrar o produto no site e `0` para ocultar.
 
-|ID|Categoria|Produto|Preço|
-|--------|----------------|-------------------------|---------|
-|1|Brigadeiros|Beijinho|190.00|
-|2|Brigadeiros|Brigadeiro Oreo|210.00|
-|3|Bombons|Bombom Decorado|8.00|
+## Publicar no GitHub Pages
 
----
+1. Crie um repositório público no GitHub.
+2. Envie `index.html`, `produtos.csv` e `README.md` na raiz.
+3. Vá em **Settings > Pages**.
+4. Selecione **Deploy from a branch**.
+5. Escolha `main` e `/root`.
+6. Salve e aguarde o link do site.
 
-## 💻 Como executar localmente
+## Próximas melhorias
 
-Clone o projeto:
-
-```bash
-git clone https://github.com/SEU_USUARIO/jujuba-doces.git
-```
-
-Entre na pasta:
-
-```bash
-cd jujuba-doces
-```
-
-Abra o arquivo:
-
-```
-index.html
-```
-
-em qualquer navegador moderno.
-
----
-
-## 🌐 Publicação no GitHub Pages
-
-Acesse:
-
-```
-Settings
-```
-
-↓
-
-```
-Pages
-```
-
-↓
-
-```
-Deploy from Branch
-```
-
-↓
-
-```
-main
-```
-
-↓
-
-```
-/root
-```
-
-Após alguns minutos o site estará disponível em:
-
-```
-https://SEU_USUARIO.github.io/jujuba-doces/
-```
-
----
-
-## 🛠 Tecnologias
-
-- HTML5
-
-- CSS3
-
-- JavaScript
-
-- CSV
-
-- GitHub Pages
-
----
-
-## 🎯 Roadmap
-
-- [x] Catálogo
-
-- [x] Pesquisa
-
-- [x] Responsividade
-
-- [x] Orçamento
-
-- [ ] Cadastro de cliente
-
-- [ ] Banco de dados
-
-- [ ] Painel administrativo
-
-- [ ] PDF automático
-
-- [ ] Área administrativa
-
-- [ ] Controle de pedidos
-
-- [ ] Controle financeiro
-
-- [ ] Aplicativo PWA
-
----
-
-## 📷 Preview
-
-Em breve será adicionada uma interface moderna inspirada nos principais aplicativos de delivery, proporcionando uma experiência simples e intuitiva para o cliente.
-
----
-
-## ❤️ Desenvolvido para
-
-**Jujuba Doces**
-
-Transformando momentos especiais em doces lembranças.
+- Bloqueio de datas indisponíveis
+- Agenda administrativa
+- Geração de PDF
+- Banco de dados
+- Login administrativo
+- Pagamento via Pix
