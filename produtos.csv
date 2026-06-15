@@ -1,0 +1,34 @@
+id,categoria,produto,preco,unidade,quantidade_minima,descricao,imagem,ativo
+1,Brigadeiros,Beijinho,190.00,cento,25,Beijinho tradicional,beijinho.jpg,1
+2,Brigadeiros,Brigadeiro Tradicional Granulado,190.00,cento,25,Granulado simples,brigadeiro_tradicional.jpg,1
+3,Brigadeiros,Brigadeiro Choco Ball,230.00,cento,25,Choco Ball,chocoball.jpg,1
+4,Brigadeiros,Brigadeiro Vermicelli ao Leite,270.00,cento,25,Vermicelli ao leite,vermicelli.jpg,1
+5,Brigadeiros,Brigadeiro Creme Brulée,200.00,cento,25,Creme Brulée,creme_brulee.jpg,1
+6,Brigadeiros,Brigadeiro Oreo,210.00,cento,25,Oreo,oreo.jpg,1
+7,Brigadeiros,Brigadeiro Churros,240.00,cento,25,Churros,churros.jpg,1
+8,Brigadeiros,Brigadeiro Ninho com Nutella,250.00,cento,25,Ninho com Nutella,ninho_nutella.jpg,1
+9,Decorados,Brigadeiro Decorado,4.30,unidade,1,Brigadeiro decorado,brigadeiro_decorado.jpg,1
+10,Decorados,Olho de Sogra,3.90,unidade,1,Olho de Sogra,olho_sogra.jpg,1
+11,Decorados,Camafeu,4.00,unidade,1,Camafeu,camafeu.jpg,1
+12,Decorados,Doce de Leite Ninho Personalizado,4.50,unidade,1,Personalizado,doce_leite.jpg,1
+13,Copinhos,Copinho Mousse Limão,4.00,unidade,1,Mousse de Limão,copo_limao.jpg,1
+14,Copinhos,Copinho Mousse Maracujá,4.00,unidade,1,Mousse de Maracujá,copo_maracuja.jpg,1
+15,Copinhos,Copinho Mousse Morango,4.00,unidade,1,Mousse de Morango,copo_morango.jpg,1
+16,Pirulitos,Pirulito Chocolate Decorado,13.00,unidade,10,Pirulito Decorado,pirulito.jpg,1
+17,Bombons,Bombom Pequeno Simples,3.90,unidade,25,Sem decoração,bombom_pequeno.jpg,1
+18,Bombons,Bombom Pequeno Decorado,8.00,unidade,25,Decorado,bombom_pequeno_decorado.jpg,1
+19,Bombons,Bombom Grande Decorado,9.50,unidade,15,Decorado,bombom_grande.jpg,1
+20,Bombons,Bombom Grande Decorado 3D,18.00,unidade,10,Decorado 3D,bombom3d.jpg,1
+21,Bombons,Bombom de Uva,7.00,unidade,1,Bombom de Uva,bombom_uva.jpg,1
+22,Bombons,Crocante de Uva,7.00,unidade,1,Crocante de Uva,crocante_uva.jpg,1
+23,Bombons,Bombom de Morango,9.00,unidade,1,Bombom de Morango,bombom_morango.jpg,1
+24,Pão de Mel,Mini Pão de Mel Simples,8.50,unidade,15,Sem decoração,pdm_simples.jpg,1
+25,Pão de Mel,Mini Pão de Mel Decorado,12.00,unidade,15,Decorado,pdm_decorado.jpg,1
+26,Pão de Mel,Mini Pão de Mel Decorado 3D,18.00,unidade,15,Decorado 3D,pdm3d.jpg,1
+27,Pão de Mel,Pão de Mel no Palito,14.00,unidade,10,Decorado,pdm_palito.jpg,1
+28,Pão de Mel,Pão de Mel Casinha,20.00,unidade,1,Formato Casinha,pdm_casinha.jpg,1
+29,Cupcakes,Cupcake Médio Cobertura,13.00,unidade,14,Cobertura,cupcake_cobertura.jpg,1
+30,Cupcakes,Cupcake Médio Decorado,15.00,unidade,14,Decorado,cupcake_decorado.jpg,1
+31,Cupcakes,Cupcake Médio Decorado 3D,18.00,unidade,14,Decorado 3D,cupcake3d.jpg,1
+32,Cupcakes,Cupcake Mini Cobertura,12.00,unidade,18,Cobertura,cupcake_mini.jpg,1
+33,Cupcakes,Cupcake Mini Decorado,14.00,unidade,18,Decorado,cupcake_mini_decorado.jpg,1
