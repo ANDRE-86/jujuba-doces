@@ -1,43 +1,110 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Jujuba Doces | Orçamento</title>
-<style>
-:root{--pink:#ff5fa8;--purple:#6d4aa1;--green:#9adbbb;--bg:#fff7fb;--text:#2c2430;--muted:#786b7b;--card:#fff;--shadow:0 10px 30px rgba(87,58,126,.14)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);padding-bottom:92px}button,input,select,textarea{font:inherit}button{border:0;cursor:pointer}.top{position:sticky;top:0;z-index:20;background:linear-gradient(135deg,var(--green),#fff);padding:14px 16px 12px;box-shadow:0 2px 16px rgba(0,0,0,.08)}.brand{display:flex;align-items:center;gap:10px}.logo{width:48px;height:48px;border-radius:15px;background:#fff;display:grid;place-items:center;font-size:26px;box-shadow:var(--shadow)}.brand h1{font-size:20px;margin:0;color:var(--purple)}.brand p{font-size:12px;margin:2px 0 0;color:#5d4a68}.search{margin-top:12px;display:grid;grid-template-columns:1fr 118px;gap:8px}.search input,.search select,.form input,.form textarea,.form select{border:1px solid #eadfeb;border-radius:16px;padding:13px;background:#fff;width:100%}.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 16px 8px}.chip{white-space:nowrap;padding:9px 13px;border-radius:999px;background:#fff;border:1px solid #efddea;color:var(--purple);font-weight:700}.chip.active{background:var(--purple);color:#fff}.hero{padding:18px 16px}.hero-card{background:#fff;border-radius:24px;padding:18px;box-shadow:var(--shadow)}.hero-card h2{margin:0 0 8px;font-size:24px;color:var(--purple)}.hero-card p{margin:0;color:var(--muted);line-height:1.45}.list{padding:0 16px;display:grid;gap:12px}.product{background:var(--card);border-radius:22px;padding:14px;display:grid;grid-template-columns:1fr auto;gap:10px;box-shadow:var(--shadow);border:1px solid #f1e7f0}.product h3{font-size:16px;margin:4px 0 5px}.tag{font-size:11px;display:inline-block;padding:5px 8px;border-radius:999px;background:#f0fff7;color:#28724e;font-weight:800;text-transform:uppercase}.desc{font-size:13px;color:var(--muted);margin:0}.price{text-align:right;min-width:104px}.price strong{display:block;color:var(--purple);font-size:17px;margin-bottom:10px}.add{background:var(--pink);color:#fff;font-weight:800;padding:10px 12px;border-radius:14px}.qty{display:flex;align-items:center;justify-content:flex-end;gap:8px}.qty button{width:34px;height:34px;border-radius:12px;background:#f4ecf5;color:var(--purple);font-weight:900}.bottom{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #eee;padding:10px 14px;z-index:30;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;box-shadow:0 -8px 24px rgba(0,0,0,.1)}.bottom strong{color:var(--purple);font-size:20px}.checkout{background:var(--purple);color:#fff;border-radius:18px;padding:14px 16px;font-weight:900}.drawer{position:fixed;inset:auto 0 0 0;max-height:88vh;transform:translateY(110%);transition:.25s;z-index:40;background:#fff;border-radius:26px 26px 0 0;padding:18px;box-shadow:0 -14px 40px rgba(0,0,0,.22);overflow:auto}.drawer.open{transform:translateY(0)}.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:35}.overlay.open{display:block}.drawer h2{margin:0 0 10px;color:var(--purple)}.cart-item{display:grid;grid-template-columns:1fr auto;gap:8px;border-top:1px solid #eee;padding:10px 0}.remove{background:#fff0f6;color:#c01866;border-radius:12px;padding:8px 10px}.form{display:grid;gap:10px;margin-top:12px}.send{background:#25d366;color:#fff;border-radius:18px;padding:14px;font-weight:900;width:100%;margin-top:12px}.note{font-size:12px;color:var(--muted);line-height:1.35}.empty{text-align:center;color:var(--muted);padding:24px}.rules{padding:16px}.rules .box{background:#fff;border-radius:22px;padding:16px;box-shadow:var(--shadow);font-size:14px;color:var(--muted);line-height:1.5}.desktop{display:none}@media(min-width:760px){body{padding-bottom:0}.desktop{display:block}.top{padding:18px 34px}.brand h1{font-size:26px}.search{max-width:900px;grid-template-columns:1fr 220px}.chips,.hero,.list,.rules{max-width:1000px;margin:auto}.list{grid-template-columns:repeat(2,1fr)}.bottom{left:auto;right:24px;bottom:24px;width:390px;border-radius:24px;border:1px solid #eee}.drawer{left:auto;right:24px;bottom:24px;width:430px;border-radius:26px}.product h3{font-size:18px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#551bb3" />
+  <title>Jujuba Doces | Monte sua festa</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header class="top"><div class="brand"><div class="logo">🍬</div><div><h1>Jujuba Doces</h1><p>Cardápio 2026 • pré-orçamento pelo celular</p></div></div><div class="search"><input id="busca" placeholder="Buscar doce..." oninput="render()"><select id="selectCat" onchange="setCat(this.value)"><option value="">Todas</option></select></div></header>
-<section class="hero"><div class="hero-card"><h2>Monte seu orçamento</h2><p>Escolha os doces, ajuste a quantidade e envie pelo WhatsApp. Depois dá para evoluir isso para cadastro completo e PDF automático.</p></div></section>
-<nav class="chips" id="chips"></nav>
-<main class="list" id="lista"></main>
-<section class="rules"><div class="box"><b>Condições:</b> 50% para fechar a encomenda e 50% na entrega ou na semana da festa. Cancelamento: 10% do valor total do pedido.</div></section>
-<div class="bottom"><div><span>Total</span><br><strong id="totalBottom">R$ 0,00</strong></div><button class="checkout" onclick="openCart()">Ver orçamento</button></div>
-<div class="overlay" id="overlay" onclick="closeCart()"></div>
-<aside class="drawer" id="drawer"><h2>Meu orçamento</h2><div id="cartList"></div><p><b>Total:</b> <strong id="totalDrawer">R$ 0,00</strong></p><div class="form"><input id="nome" placeholder="Nome do cliente"><input id="telefone" placeholder="Telefone/WhatsApp"><input id="dataFesta" type="date" aria-label="Data da festa"><label class="note" for="dataEntrega">Agendamento da entrega</label><input id="dataEntrega" type="date" aria-label="Data da entrega"><input id="horaEntrega" type="time" aria-label="Horário da entrega"><select id="tipoEntrega" aria-label="Tipo de entrega"><option value="Entrega">Entrega</option><option value="Retirada">Retirada</option></select><textarea id="obs" rows="3" placeholder="Tema, observações e endereço"></textarea></div><button class="send" onclick="sendWhatsApp()">Enviar pelo WhatsApp</button><p class="note">Este envio gera uma mensagem pronta. O orçamento final ainda deve ser confirmado pela Jujuba Doces.</p></aside>
-<script>
-let produtos=[], carrinho=[], categoria='';
-const money=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-function parseCSV(text){const lines=text.trim().split(/\r?\n/);const h=lines.shift().split(',');return lines.filter(Boolean).map(l=>{const c=l.split(',');return Object.fromEntries(h.map((k,i)=>[k,c[i]||'']))})}
-async function load(){try{const r=await fetch('produtos.csv');produtos=parseCSV(await r.text()).filter(p=>p.ativo==='1')}catch(e){document.getElementById('lista').innerHTML='<div class="empty">Não consegui carregar produtos.csv. Confira se o arquivo está na mesma pasta do index.html.</div>';return}setupCats();render()}
-function setupCats(){const cats=['',...new Set(produtos.map(p=>p.categoria))];selectCat.innerHTML=cats.map(c=>`<option value="${c}">${c||'Todas'}</option>`).join('');chips.innerHTML=cats.map(c=>`<button class="chip ${c==categoria?'active':''}" onclick="setCat('${c}')">${c||'Todos'}</button>`).join('')}
-function setCat(c){categoria=c;selectCat.value=c;setupCats();render()}
-function render(){const q=busca.value.toLowerCase();const list=produtos.filter(p=>(!categoria||p.categoria===categoria)&&p.produto.toLowerCase().includes(q));lista.innerHTML=list.map(p=>`<article class="product"><div><span class="tag">${p.categoria}</span><h3>${p.produto}</h3><p class="desc">${p.descricao} • mínimo ${p.quantidade_minima} ${p.unidade}</p></div><div class="price"><strong>${money(+p.preco)}</strong><button class="add" onclick="add('${p.id}')">Adicionar</button></div></article>`).join('')||'<div class="empty">Nenhum doce encontrado.</div>';updateCart()}
-function add(id){const p=produtos.find(x=>x.id===id);const it=carrinho.find(x=>x.id===id);if(it)it.qtd++;else carrinho.push({...p,qtd:1});updateCart();}
-function dec(id){const it=carrinho.find(x=>x.id===id);if(!it)return;it.qtd--;if(it.qtd<=0)carrinho=carrinho.filter(x=>x.id!==id);updateCart()}
-function inc(id){const it=carrinho.find(x=>x.id===id);if(it)it.qtd++;updateCart()}
-function removeItem(id){carrinho=carrinho.filter(x=>x.id!==id);updateCart()}
-function total(){return carrinho.reduce((s,i)=>s+(+i.preco*i.qtd),0)}
-function updateCart(){totalBottom.textContent=money(total());totalDrawer.textContent=money(total());cartList.innerHTML=carrinho.length?carrinho.map(i=>`<div class="cart-item"><div><b>${i.produto}</b><br><small>${money(+i.preco)} / ${i.unidade}</small><div class="qty"><button onclick="dec('${i.id}')">−</button><span>${i.qtd}</span><button onclick="inc('${i.id}')">+</button></div></div><button class="remove" onclick="removeItem('${i.id}')">remover</button></div>`).join(''):'<div class="empty">Seu orçamento está vazio.</div>'}
-function openCart(){drawer.classList.add('open');overlay.classList.add('open')}
-function closeCart(){drawer.classList.remove('open');overlay.classList.remove('open')}
-function fmtDate(v){if(!v)return '';const [a,m,d]=v.split('-');return `${d}/${m}/${a}`}
-function setMinDates(){const today=new Date().toISOString().split('T')[0];dataFesta.min=today;dataEntrega.min=today}
-function sendWhatsApp(){if(!carrinho.length){alert('Adicione pelo menos um item.');return}let msg='Olá! Gostaria de solicitar um orçamento Jujuba Doces.%0A%0A';msg+=`Nome: ${nome.value||'-'}%0ATelefone: ${telefone.value||'-'}%0AData da festa: ${fmtDate(dataFesta.value)||'-'}%0ATipo: ${tipoEntrega.value||'-'}%0AData da entrega/retirada: ${fmtDate(dataEntrega.value)||'-'}%0AHorário: ${horaEntrega.value||'-'}%0AObservações: ${obs.value||'-'}%0A%0AItens:%0A`;carrinho.forEach(i=>msg+=`- ${i.produto}: ${i.qtd} x ${money(+i.preco)} = ${money(i.qtd*+i.preco)}%0A`);msg+=`%0ATotal estimado: ${money(total())}%0A`;window.open('https://wa.me/?text='+msg,'_blank')}
-load();setMinDates();
-</script>
+  <main class="app-shell">
+    <section class="step active" id="step-welcome">
+      <div class="brand-pill">Desde 2014 • Rio Brilhante-MS</div>
+      <div class="hero-card">
+        <div class="logo-mark">🧁</div>
+        <h1>Bem-vinda à Jujuba Doces</h1>
+        <p>Vamos montar sua encomenda de forma simples, escolhendo data, tema, cores e doces para a festa.</p>
+        <button class="btn-primary" data-next="step-cadastro">Vamos montar a festa?</button>
+      </div>
+    </section>
+
+    <section class="step" id="step-cadastro">
+      <div class="progress"><span>Etapa 1 de 10</span><div><i style="width:10%"></i></div></div>
+      <h2>Cadastro rápido</h2>
+      <p class="muted">Preencha agora ou pule para escolher os produtos primeiro.</p>
+      <label>Nome<input id="clienteNome" placeholder="Seu nome" /></label>
+      <label>WhatsApp<input id="clienteWhatsapp" placeholder="(67) 99999-9999" /></label>
+      <label>E-mail<input id="clienteEmail" placeholder="email@exemplo.com" /></label>
+      <div class="actions"><button class="btn-secondary" data-prev="step-welcome">Voltar</button><button class="btn-link" data-next="step-data">Pular</button><button class="btn-primary" data-next="step-data">Continuar</button></div>
+    </section>
+
+    <section class="step" id="step-data">
+      <div class="progress"><span>Etapa 2 de 10</span><div><i style="width:20%"></i></div></div>
+      <h2>Data do evento</h2>
+      <p class="muted">Escolha a data da festa. Depois vamos validar a disponibilidade.</p>
+      <label>Data do evento<input type="date" id="dataEvento" /></label>
+      <div class="calendar-note"><b>Agenda:</b> integração futura com Google Calendar para datas disponíveis.</div>
+      <div class="actions"><button class="btn-secondary" data-prev="step-cadastro">Voltar</button><button class="btn-primary" data-next="step-tema">Continuar</button></div>
+    </section>
+
+    <section class="step" id="step-tema">
+      <div class="progress"><span>Etapa 3 de 10</span><div><i style="width:30%"></i></div></div>
+      <h2>Escolha o tema</h2>
+      <div class="grid-options" id="temaOptions"></div>
+      <div class="actions"><button class="btn-secondary" data-prev="step-data">Voltar</button><button class="btn-primary" data-next="step-cores">Continuar</button></div>
+    </section>
+
+    <section class="step" id="step-cores">
+      <div class="progress"><span>Etapa 4 de 10</span><div><i style="width:40%"></i></div></div>
+      <h2>Cores da festa</h2>
+      <p class="muted">Selecione até 3 cores predominantes.</p>
+      <div class="color-options" id="corOptions"></div>
+      <div class="actions"><button class="btn-secondary" data-prev="step-tema">Voltar</button><button class="btn-primary" data-next="step-personalizados">Continuar</button></div>
+    </section>
+
+    <section class="step" id="step-personalizados">
+      <div class="progress"><span>Etapa 5 de 10</span><div><i style="width:50%"></i></div></div>
+      <h2>Doces personalizados</h2>
+      <div class="product-list" id="personalizadosList"></div>
+      <div class="actions"><button class="btn-secondary" data-prev="step-cores">Voltar</button><button class="btn-primary" data-next="step-tradicionais">Continuar</button></div>
+    </section>
+
+    <section class="step" id="step-tradicionais">
+      <div class="progress"><span>Etapa 6 de 10</span><div><i style="width:60%"></i></div></div>
+      <h2>Doces tradicionais</h2>
+      <div class="product-list" id="tradicionaisList"></div>
+      <div class="actions"><button class="btn-secondary" data-prev="step-personalizados">Voltar</button><button class="btn-primary" data-next="step-revisao">Revisar pedido</button></div>
+    </section>
+
+    <section class="step" id="step-revisao">
+      <div class="progress"><span>Etapa 7 de 10</span><div><i style="width:70%"></i></div></div>
+      <h2>Revisão dos produtos</h2>
+      <div id="cartReview" class="review-box"></div>
+      <div class="actions"><button class="btn-secondary" data-prev="step-tradicionais">Voltar</button><button class="btn-primary" data-next="step-orcamento">Ver orçamento</button></div>
+    </section>
+
+    <section class="step" id="step-orcamento">
+      <div class="progress"><span>Etapa 8 de 10</span><div><i style="width:80%"></i></div></div>
+      <h2>Orçamento prévio</h2>
+      <div class="budget-card">
+        <p>Total estimado</p><strong id="totalEstimado">R$ 0,00</strong>
+        <hr><span>Entrada 50%: <b id="entradaValor">R$ 0,00</b></span><span>Saldo na entrega: <b id="saldoValor">R$ 0,00</b></span>
+      </div>
+      <p class="muted small">O orçamento poderá sofrer ajustes conforme detalhes da personalização.</p>
+      <div class="actions"><button class="btn-secondary" data-prev="step-revisao">Voltar</button><button class="btn-primary" data-next="step-agendamento">Continuar</button></div>
+    </section>
+
+    <section class="step" id="step-agendamento">
+      <div class="progress"><span>Etapa 9 de 10</span><div><i style="width:90%"></i></div></div>
+      <h2>Entrega ou retirada</h2>
+      <label>Data da entrega/retirada<input type="date" id="dataEntrega" /></label>
+      <label>Horário<input type="time" id="horaEntrega" /></label>
+      <label>Tipo<select id="tipoEntrega"><option>Entrega</option><option>Retirada</option></select></label>
+      <label>Observações<textarea id="observacoes" rows="4" placeholder="Tema, endereço, detalhes importantes..."></textarea></label>
+      <div class="actions"><button class="btn-secondary" data-prev="step-orcamento">Voltar</button><button class="btn-primary" data-next="step-final">Gerar pedido</button></div>
+    </section>
+
+    <section class="step" id="step-final">
+      <div class="hero-card final-card">
+        <div class="logo-mark">💜</div>
+        <h2>Obrigada!</h2>
+        <p>Seu pedido foi preparado para envio. Para reservar a data, após aprovação será necessário pagar 50% em até 24h e o restante na entrega ou retirada.</p>
+        <button class="btn-primary" id="btnWhatsapp">Enviar pelo WhatsApp</button>
+      </div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
 </body>
 </html>

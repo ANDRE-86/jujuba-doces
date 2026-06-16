@@ -1,0 +1,10 @@
+id,categoria,produto,preco,unidade,quantidade_minima,ativo
+1,Personalizados,Brigadeiro decorado,4.30,unidade,1,1
+2,Personalizados,Cupcake decorado,15.00,unidade,14,1
+3,Personalizados,Pirulito de chocolate decorado,13.00,unidade,10,1
+4,Personalizados,Bombom grande decorado 3D,18.00,unidade,10,1
+5,Tradicionais,Beijinho,190.00,cento,25,1
+6,Tradicionais,Brigadeiro tradicional,190.00,cento,25,1
+7,Tradicionais,Brigadeiro de Oreo,210.00,cento,25,1
+8,Tradicionais,Brigadeiro Ninho com Nutella,250.00,cento,25,1
+9,Tradicionais,Bombom de Morango,9.00,unidade,1,1
